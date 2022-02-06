@@ -95,7 +95,7 @@ function drawLoop( time ) {
     if (meter.volume*1000 >= 150 && contz == 0){
         
         contz ++; // variável contadora para tocar o play uma única vez ...
-        playSilencio();  // aqui você pode escolher uma bronca, um apito ou sei lá o que...      
+        playSilencio();  // função que toca o som, ela está criada abaixo.  
         
         
         //reload da página em 04 segundos, 4000 abaixo é 04 segundos
@@ -110,38 +110,9 @@ function drawLoop( time ) {
 // coloque o som wav, mp3, m4a ou sei la o que voce tiver de som 
 // na pasta raiz desse projeto e divirta-se
 
-  function playBronca(){    
-    var filepath='bronca.m4a'; //som da bronca
-    var som = new Audio();   
-    som.src = filepath;
-    som.play();
-  }
-
-  function playApito(){    
-    var filepath='apito.wav'; //som do Apito
-    var som = new Audio();   
-    som.src = filepath;
-    som.play();
-  }
-
-  function playSino(){    
-    var filepath='sinoigreja.wav'; //som do sino da igreja
-    var som = new Audio();   
-    som.src = filepath;
-    som.play();
-  }
-
   function playSilencio(){    
     var filepath='silencio.wav'; //som de silencio
     var som = new Audio();   
     som.src = filepath;
     som.play();
   }
-
-  function playVelho(){    
-    var filepath='velho.mp3'; //som - velho oeste
-    var som = new Audio();   
-    som.src = filepath;
-    som.play();
-  }
-
